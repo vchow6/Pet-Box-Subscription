@@ -43,4 +43,4 @@ Per the visual below, not repeat purchases had a higher amount of sales compared
 
 ![image](https://github.com/vchow6/PetMind/blob/main/Sales%20of%20Not%20Repeat%20vs.%20Repeat%20Purchases.png)
 
-![image](https://github.com/vchow6/PetMind/blob/main/Sales%20per%20Category.png)
+![image](https://github.com/vchow6/PetMind/blob/main/Sales%20of%20Repeat%20Purchase%20by%20Category.png)
