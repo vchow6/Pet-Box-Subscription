@@ -9,21 +9,21 @@ The dataset ([found here](https://github.com/vchow6/Pet-Box-Subscription/blob/ma
 ## Data Validation
 The original data is 1500 rows and 8 columns. I utilized Python for data validation and cleaning, with changes of each column noted in the below: 
 
-**product_id:** this column is nominal, with unique and no missing values. No changes were made
+**product_id:** data type of **product_id** was changed from "numeric" to "character". The column has unique data and no missing values. 
 
-**category:** this column is nominal, with repeated values. Some missing data are labeled as '-'. The missing '-' data were replaced with 'Unknow' for clarification
+**category:** data type of **category** is "character", as per criteria. Data has repeate values, with 7 unique values. Some missing data are labeled as '-'. The missing '-' data were replaced with 'Unknow' for clarification
 
-**animal:** the column is nomminal, with repeated values, and no missing values. No changes were made
+**animal:** the data type of **animal** is "character", as per criteria. The data has repeate values (with 4 unique values), and no missing values. No changes were made
 
-**size:** the column is nominal, with repeated values, and no missing values. However, the repeated values were all in different formats (all capitalized vs. all lower case vs. a mix of lower and upper cases, etc), making it several extra unnecessary categories. To fix this, the data was changed to all having a proper capitalization (upper case for the first letter of each value) 
+**size:** the data type of **size** is "character", as per criteria, with repeated values, and no missing values. However, the repeated values were all in different formats (all capitalized vs. all lower case vs. a mix of lower and upper cases, etc), making it several extra unnecessary categories. To fix this, the data was changed to all having a proper capitalization (upper case for the first letter of each value) 
 
-**price:** the column is continuous, all positive and no missing data. The data type was listed as 'object', so I utilized Pandas in Python to change the data type to 'float'. 
+**price:** the data type of **price** was changed from "object" to "numeric", per criteria. The data is all positive and there's no missing values. 
 
-**sales:** the column is continuous, all positive and no missing data. No changes were made
+**sales:** the data type of **sales** is "numeric"/"float", as per criteria. There are no negative values and no missing data. No changes were made
 
-**rating:** the column is discreet with range from 0 - 10. There were 150 missing data, thus they were replaced to '0. I have also converted the data type from 'float' to 'int' within Pandas in Python
+**rating:** the data type of **rating** is "numeric", as per criteria. There were 150 missing data, thus they were replaced to '0'. I have also converted the data type from 'float' to 'int' within Pandas in Python
 
-**repeat_purchase:** the column is nominal, with repeate and no missing data. No changes were made
+**repeat_purchase:** the data type of **repeat_purchase** is "numeric", criteria. It has repeate values and no missing data. No changes were made
 
 
 ## Distribution of Sales
