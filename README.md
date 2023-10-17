@@ -61,8 +61,17 @@ The original data is 1500 rows and 8 columns. All columns were checked for missi
 * It has 2 unique values: 0 (represent single-purchase products) and 1 (represent multi-purchase products)
 * No changes were made.
 
+## Data Discovery and Visualization
+Let's take a look at the repeat vs. non-repeat purcahses distribution from the data set
 
-## Distribution of Sales
+| Purchase Category | Number of Products | Total Sales | % of Products | % of Sales |
+| --- | --- | --- | --- | --- |
+| Non-repeat purchases | 594 | $610,850.60 | 39.60% | 40.85% |
+| Repeat purchases | 906 | $884,406.17 | 60.40% | 59.14% |
+
+### Distribution of Sales
+
+
 
 Looking at the graph,the equipment category has the most count of repeat purchases. The categories are unbalance across the board, with Equipment making the most number of repeat sales, while the Accessory and Unknown made the lowest amount of repeat sales.
 
