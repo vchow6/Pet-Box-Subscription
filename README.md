@@ -62,16 +62,22 @@ The original data is 1500 rows and 8 columns. All columns were checked for missi
 * No changes were made.
 
 ## Data Discovery and Visualization
-Let's take a look at the repeat vs. non-repeat purcahses distribution from the data set
+Let's take a look at the repeat vs. non-repeat purcahses distribution from the data set:
 
 | Purchase Category | Number of Products | Total Sales | % of Products | % of Sales |
 | --- | --- | --- | --- | --- |
 | Non-repeat purchases | 594 | $610,850.60 | 39.60% | 40.85% |
 | Repeat purchases | 906 | $884,406.17 | 60.40% | 59.14% |
 
+With the above, we see that repeat purchases exceed non-repeat purchases (60.40% vs. 39.60%), meaning that PetMind has a loyalty customer base that come back to repurchase products. This information already allows us to answer 2 of our customer's questions: 
+
+1.  *How many products are being purchased more than once?*
+   - 906 products are being purchased more than once. We will further analyze the type of products that are more frequently repurchased after this section
+  
+2.  *Do the products being purchased again have better sales than others?*
+   - The products being purchased again do have better sales than others. Repurchased sales is 59.14%, which is proportional to the number of repurchased products, implying  that if there was equal amount of single purchase and repurchase products, the sales would be more or less equal. 
+
 ### Distribution of Sales
-
-
 
 Looking at the graph,the equipment category has the most count of repeat purchases. The categories are unbalance across the board, with Equipment making the most number of repeat sales, while the Accessory and Unknown made the lowest amount of repeat sales.
 
