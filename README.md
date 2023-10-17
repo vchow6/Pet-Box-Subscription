@@ -1,29 +1,64 @@
 # PetMind
 
 ## Background
-PetMind is a retailer of products for pets. They are based in the United States. PetMind sells products that are a mix of luxury items and everyday items. Luxury items include toys. Everyday items include food. The company wants to increase sales by selling more everyday products repeatedly. They have been testing this approach for the last year. They now want a report on how repeat purchases impact sales.
+PetMind is a nationwide pet product retailer in the United States. PetMind sells products that are a mix of luxury items and everyday items. The company wants to increase sales by selling more everyday products repeatedly. They have been testing this approach for the last year. They now want a report on how repeat purchases impact sales.
+
+### Customer Questions:
+The marketing team would like to answer the following questions to help with the decision:
+* How many products are being purchased more than once?
+* Do the products being purchased again have better sales than others?
+* What products are more likely to be purchased again for different types of pets?
 
 ## The Data
 The dataset ([found here](https://github.com/vchow6/Pet-Box-Subscription/blob/main/pet_supplies_2212.csv)) was provided by DataCamp through their Data Analyst Associate Certification program.
 
-## Data Validation
-The original data is 1500 rows and 8 columns. I utilized Python for data validation and cleaning, with changes of each column noted in the below: 
+### Data Validation
 
-**product_id:** data type of **product_id** was changed from "numeric" to "character". The column has unique data and no missing values. 
+**Validation tasks performed**
 
-**category:** data type of **category** is "character", as per criteria. Data has repeate values, with 7 unique values. Some missing data are labeled as '-'. The missing '-' data were replaced with 'Unknow' for clarification
+The original data is 1500 rows and 8 columns. All columns were checked for missing data, and only the 'rating' column had 150 null or empty cells.
 
-**animal:** the data type of **animal** is "character", as per criteria. The data has repeate values (with 4 unique values), and no missing values. No changes were made
+**product_id:** 
+* Class of **product_id** was changed from "numeric" to "character".
+* The column has all unique data and no missing values. 
 
-**size:** the data type of **size** is "character", as per criteria, with repeated values, and no missing values. However, the repeated values were all in different formats (all capitalized vs. all lower case vs. a mix of lower and upper cases, etc), making it several extra unnecessary categories. To fix this, the data was changed to all having a proper capitalization (upper case for the first letter of each value) 
+**category:** 
+* Class of **category** is "character", as per criteria.
+* Data has 7 unique values
+* Some missing data are labeled as '-'. The missing '-' data were replaced with 'Unknow' for clarification
+* The unique values include: 'Equipment', 'Food', 'Toys', 'Medicine', 'Housing', 'Accessory', and 'Unknown'
 
-**price:** the data type of **price** was changed from "object" to "numeric", per criteria. The data is all positive and there's no missing values. 
+**animal:** 
+* Class of **animal** is "character", as per criteria.
+* The data has 4 unique values, and no missing values.
+* The unique values include: 'Cat', 'Fish', 'Dog', 'Bird'
+* No changes were made to this data
 
-**sales:** the data type of **sales** is "numeric"/"float", as per criteria. There are no negative values and no missing data. No changes were made
+**size:** 
+* Class of **size** is "character", as per criteria
+* The data has 9 unique values. Upon further inspection, the values are all formatted differently, thus creating more unecessary unique values (ie. 'small' vs 'SMALL' vs 'Small', which in this instance it creates 3 different distinct values). The data needs to be formatted properly in order categorize the data approriately for accurate data analysis
+* The data values were changed to all have capitalized first letter, and lower case for the rest of the string
+* The data now includes only 3 unique values: 'Small', 'Medium', 'Large'
 
-**rating:** the data type of **rating** is "numeric", as per criteria. There were 150 missing data, thus they were replaced to '0'. I have also converted the data type from 'float' to 'int' within Pandas in Python
+**price:** 
+* Class of **price** was changed from "object" to "numeric", per criteria.
+* The data is all positive and there's no missing values. 
 
-**repeat_purchase:** the data type of **repeat_purchase** is "numeric", criteria. It has repeate values and no missing data. No changes were made
+**sales:** 
+* Class of **sales** is "float", as per criteria.
+* There are no negative values and no missing data.
+* No changes were made
+
+**rating:** 
+* Class of **rating** is "numeric", as per criteria.
+* The 150 missing values where replaced to '0'.
+* Converted the data type from 'float' to 'int'
+* The data has 10 unique values, which is the rating from 0 to 9
+
+**repeat_purchase:** 
+* Class of **repeat_purchase** is "numeric", as per criteria.
+* It has 2 unique values: 0 (represent single-purchase products) and 1 (represent multi-purchase products)
+* No changes were made.
 
 
 ## Distribution of Sales
