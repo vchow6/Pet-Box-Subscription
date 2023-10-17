@@ -42,6 +42,7 @@ The original data is 1500 rows and 8 columns. All columns were checked for missi
 
 **price:** 
 * Class of **price** was changed from "object" to "numeric", per criteria.
+* The previously data values that were listed as 'unlisted' became null values after the class change. Replaced the null values with the median value of the 'price' column.
 * The data is all positive and there's no missing values. 
 
 **sales:** 
